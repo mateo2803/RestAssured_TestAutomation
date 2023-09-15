@@ -50,7 +50,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Sep 15, 2023 11:48:49 AM</span>
+			<span class='label blue darken-3 suite-start-time'>Sep 15, 2023 11:51:35 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -78,10 +78,10 @@
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
 					<li><a href='#'>@getAll</a></li>
-					<li><a href='#'>@createEmployee</a></li>
-					<li><a href='#'>@deleteEmployee</a></li>
 					<li><a href='#'>@getEmployee</a></li>
 					<li><a href='#'>@updateEmployee</a></li>
+					<li><a href='#'>@deleteEmployee</a></li>
+					<li><a href='#'>@createEmployee</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -161,14 +161,14 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='43%'>
-                    <span class='strong'>7</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='50%'>
+                    <span class='strong'>8</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='25%'>
                     4</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='31%'>
-                    5</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='25%'>
+                    4</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
                 </div>
@@ -192,7 +192,7 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Employee Endpoint</span>
-						<span class='test-time'>Sep 15, 2023 11:48:50 AM</span>
+						<span class='test-time'>Sep 15, 2023 11:51:36 AM</span>
 						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -205,7 +205,7 @@
 
 <div class='scenario node' test-id='2' status='fail'>
 
-	<span class='duration right label'>00 00 02.780</span>
+	<span class='duration right label'>00 00 02.959</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: /employee should return all the employees</div>
 	</div>
@@ -274,11 +274,11 @@ Expected status code <200> but was <404>.
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='6' status='pass'>
+<div class='scenario node' test-id='6' status='fail'>
 
-	<span class='duration right label'>00 00 01.674</span>
+	<span class='duration right label'>00 00 00.840</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: /employee/{id} should return an employee</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: /employee/{id} should return an employee</div>
 	</div>
 	
 	
@@ -292,38 +292,7 @@ Expected status code <200> but was <404>.
 
 
 		</li>
-		<li test-id='8' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.EmployeesSteps.verifyStatusCode(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I verify that it returns status code 200</div>
-
-
-		</li>
-		<li test-id='9' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.EmployeesSteps.verifyEmployee(java.lang.Integer))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I verify that I obtain the employee 23</div>
-
-
-		</li>
-	</ul>
-</div>
-<div class='scenario node' test-id='10' status='fail'>
-
-	<span class='duration right label'>00 00 00.886</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: /create should create a new Employee</div>
-	</div>
-	
-	
-		<div class='category-list'>
-				<span class='category label'>@createEmployee</span>
-		</div>
-	
-	<ul class='steps'>
-		<li test-id='11' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(stepDefinitions.EmployeesSteps.createEmployee(io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given the data, I should perform a POST:</div>
-
-
-					<div class="node-step"><table class='markup-table table '><tr><td>Mateo</td><td>3500</td><td>20</td></tr></table></div>
-		</li>
-		<li test-id='12' class='node then Fail' status='Fail'>
+		<li test-id='8' class='node then Fail' status='Fail'>
 			<div class="step-name" title="(stepDefinitions.EmployeesSteps.verifyStatusCode(int))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then I verify that it returns status code 200</div>
 
 
@@ -355,27 +324,57 @@ Expected status code <200> but was <429>.
 	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
 	at stepDefinitions.EmployeesSteps.verifyStatusCode(EmployeesSteps.java:30)
-	at ✽.I verify that it returns status code 200(file:///Users/mateo/Desktop/Trabajos/Trabajos%20Mateo/Universidad/Universidad%20Privada%20Boliviana/Semestre%20VII/2.%20Certificacio%CC%81n%20II/Parciales/ProyectoFinalRestAssured/src/test/resources/Tests.feature:20)
+	at ✽.I verify that it returns status code 200(file:///Users/mateo/Desktop/Trabajos/Trabajos%20Mateo/Universidad/Universidad%20Privada%20Boliviana/Semestre%20VII/2.%20Certificacio%CC%81n%20II/Parciales/ProyectoFinalRestAssured/src/test/resources/Tests.feature:13)
 </textarea>
 		</li>
-		<li test-id='13' class='node and Skip' status='Skip'>
-			<div class="step-name" title="(stepDefinitions.EmployeesSteps.verifyResponseSize(int))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I verify that the body does not have size 0</div>
+		<li test-id='9' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(stepDefinitions.EmployeesSteps.verifyEmployee(java.lang.Integer))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And I verify that I obtain the employee 23</div>
 
 
 					<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='14' class='node then Skip' status='Skip'>
-			<div class="step-name" title="(stepDefinitions.EmployeesSteps.verifyEmployeeResponseData(io.cucumber.datatable.DataTable))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then I verify the body response with the same data</div>
+	</ul>
+</div>
+<div class='scenario node' test-id='10' status='pass'>
+
+	<span class='duration right label'>00 00 01.785</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: /create should create a new Employee</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@createEmployee</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='11' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.EmployeesSteps.createEmployee(io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given the data, I should perform a POST:</div>
 
 
-					<div class="node-step"><table class='markup-table table '><tr><td>Mateo</td><td>3500</td><td>20</td></tr></table></div>
-					<div class="node-step">Step skipped</div>
+					<div class="node-step"><table class='markup-table table '><tr><td>Cangrejo</td><td>3500</td><td>20</td></tr></table></div>
+		</li>
+		<li test-id='12' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.EmployeesSteps.verifyStatusCode(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I verify that it returns status code 200</div>
+
+
+		</li>
+		<li test-id='13' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.EmployeesSteps.verifyResponseSize(int))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I verify that the body does not have size 0</div>
+
+
+		</li>
+		<li test-id='14' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(stepDefinitions.EmployeesSteps.verifyEmployeeResponseData(io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I verify the body response with the same data</div>
+
+
+					<div class="node-step"><table class='markup-table table '><tr><td>Cangrejo</td><td>3500</td><td>20</td></tr></table></div>
 		</li>
 	</ul>
 </div>
 <div class='scenario node' test-id='15' status='fail'>
 
-	<span class='duration right label'>00 00 00.603</span>
+	<span class='duration right label'>00 00 00.547</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: /put should update an Employee`s information</div>
 	</div>
@@ -390,7 +389,7 @@ Expected status code <200> but was <429>.
 			<div class="step-name" title="(stepDefinitions.EmployeesSteps.updateEmployee(java.lang.String,io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given and id "21" I should update the Employee`s inf with the following data</div>
 
 
-					<div class="node-step"><table class='markup-table table '><tr><td>Mateo</td><td>71391</td><td>20</td></tr></table></div>
+					<div class="node-step"><table class='markup-table table '><tr><td>Cangrejo</td><td>71391</td><td>20</td></tr></table></div>
 		</li>
 		<li test-id='17' class='node then Fail' status='Fail'>
 			<div class="step-name" title="(stepDefinitions.EmployeesSteps.verifyStatusCode(int))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then I verify that it returns status code 200</div>
@@ -431,14 +430,14 @@ Expected status code <200> but was <429>.
 			<div class="step-name" title="(stepDefinitions.EmployeesSteps.verifyEmployeeResponseData(io.cucumber.datatable.DataTable))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then I verify the body response with the same data</div>
 
 
-					<div class="node-step"><table class='markup-table table '><tr><td>Mateo</td><td>71391</td><td>20</td></tr></table></div>
+					<div class="node-step"><table class='markup-table table '><tr><td>Cangrejo</td><td>71391</td><td>20</td></tr></table></div>
 					<div class="node-step">Step skipped</div>
 		</li>
 	</ul>
 </div>
 <div class='scenario node' test-id='19' status='fail'>
 
-	<span class='duration right label'>00 00 00.746</span>
+	<span class='duration right label'>00 00 00.553</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: /delete should delete an Employee`s information</div>
 	</div>
@@ -563,7 +562,7 @@ Expected status code <200> but was <429>.
 								</thead>
 								<tbody>
 									<tr>
-										<td>Sep 15, 2023 11:48:50 AM</td>
+										<td>Sep 15, 2023 11:51:36 AM</td>
 										<td class='linked' test-id='2'>/employee should return all the employees</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
@@ -574,7 +573,7 @@ Expected status code <200> but was <429>.
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@createEmployee</span>
+						<span class='category-name'>@getEmployee</span>
 						<span class='category-status right'>
 						<span class='label fail'>1</span>
 						</span>
@@ -596,8 +595,41 @@ Expected status code <200> but was <429>.
 								</thead>
 								<tbody>
 									<tr>
-										<td>Sep 15, 2023 11:48:55 AM</td>
-										<td class='linked' test-id='10'>/create should create a new Employee</td>
+										<td>Sep 15, 2023 11:51:39 AM</td>
+										<td class='linked' test-id='6'>/employee/{id} should return an employee</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@updateEmployee</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 15, 2023 11:51:42 AM</td>
+										<td class='linked' test-id='15'>/put should update an Employee`s information</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
@@ -629,7 +661,7 @@ Expected status code <200> but was <429>.
 								</thead>
 								<tbody>
 									<tr>
-										<td>Sep 15, 2023 11:48:56 AM</td>
+										<td>Sep 15, 2023 11:51:42 AM</td>
 										<td class='linked' test-id='19'>/delete should delete an Employee`s information</td>
 										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
@@ -640,7 +672,7 @@ Expected status code <200> but was <429>.
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@getEmployee</span>
+						<span class='category-name'>@createEmployee</span>
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
 						</span>
@@ -662,42 +694,9 @@ Expected status code <200> but was <429>.
 								</thead>
 								<tbody>
 									<tr>
-										<td>Sep 15, 2023 11:48:53 AM</td>
-										<td class='linked' test-id='6'>/employee/{id} should return an employee</td>
+										<td>Sep 15, 2023 11:51:40 AM</td>
+										<td class='linked' test-id='10'>/create should create a new Employee</td>
 										<td><span class='test-status Pass'>Pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@updateEmployee</span>
-						<span class='category-status right'>
-						<span class='label fail'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Sep 15, 2023 11:48:56 AM</td>
-										<td class='linked' test-id='15'>/put should update an Employee`s information</td>
-										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -748,7 +747,7 @@ Expected status code <200> but was <429>.
 								</thead>
 								<tbody>
 									<tr>
-										<td>Sep 15, 2023 11:48:53 AM</td>
+										<td>Sep 15, 2023 11:51:39 AM</td>
 										<td class='linked' test-id='4'>Then I verify that it returns status code 200</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
@@ -794,8 +793,8 @@ Expected status code <200> but was <404>.
 										</td>
 									</tr>
 									<tr>
-										<td>Sep 15, 2023 11:48:56 AM</td>
-										<td class='linked' test-id='12'>Then I verify that it returns status code 200</td>
+										<td>Sep 15, 2023 11:51:40 AM</td>
+										<td class='linked' test-id='8'>Then I verify that it returns status code 200</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
 Expected status code <200> but was <404>.
@@ -840,7 +839,7 @@ Expected status code <200> but was <404>.
 										</td>
 									</tr>
 									<tr>
-										<td>Sep 15, 2023 11:48:56 AM</td>
+										<td>Sep 15, 2023 11:51:42 AM</td>
 										<td class='linked' test-id='17'>Then I verify that it returns status code 200</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
@@ -886,7 +885,7 @@ Expected status code <200> but was <404>.
 										</td>
 									</tr>
 									<tr>
-										<td>Sep 15, 2023 11:48:57 AM</td>
+										<td>Sep 15, 2023 11:51:43 AM</td>
 										<td class='linked' test-id='21'>Then I verify that it returns status code 200</td>
 										<td>
 											<textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
@@ -971,19 +970,19 @@ Expected status code <200> but was <404>.
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Sep 15, 2023 11:48:49 AM</div>
+					<div class='panel-lead'>Sep 15, 2023 11:51:35 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Sep 15, 2023 11:48:57 AM</div>
+			 		<div class='panel-lead'>Sep 15, 2023 11:51:43 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 07.769</div>
+					<div class='panel-lead'>00 00 07.758</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -1008,7 +1007,16 @@ Expected status code <200> but was <404>.
 							</td>
 						</tr>
 						<tr>
-							<td>@createEmployee</td>
+							<td>@getEmployee</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@updateEmployee</td>
 							<td>0</td>
 							<td>1</td>
 							<td>0</td>
@@ -1026,21 +1034,12 @@ Expected status code <200> but was <404>.
 							</td>
 						</tr>
 						<tr>
-							<td>@getEmployee</td>
+							<td>@createEmployee</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
 									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@updateEmployee</td>
-							<td>0</td>
-							<td>1</td>
-							<td>0</td>
-							<td>
-									0%
 							</td>
 						</tr>
 					</table>
@@ -1070,19 +1069,19 @@ Expected status code <200> but was <404>.
 				skipChild: 0,
 				infoChild: 0,
 				grandChildCount: 16,
-				passGrandChild: 7,
+				passGrandChild: 8,
 				failGrandChild: 4,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 5,
+				skipGrandChild: 4,
 				infoGrandChild: 0,
 			};
 			</script>
 		
 		<script>
 			var timeline = {
-			        "Employee Endpoint":6.739
+			        "Employee Endpoint":6.736
 			};
 		</script>
 		

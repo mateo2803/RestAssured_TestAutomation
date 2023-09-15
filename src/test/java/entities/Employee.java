@@ -11,8 +11,8 @@ public class Employee {
     private String salary;
     @Getter @Setter
     private String age;
-    @Getter @Setter
-    private String profileImage;
+//    @Getter @Setter
+//    private String profileImage;
 
     public void setSalary(String salary) {
         this.salary = salary;
@@ -38,10 +38,10 @@ public class Employee {
         return age;
     }
 
-    public void setProfileImage(String path) {
-        this.profileImage = profileImage;
-    }
-    public String getProfileImage() {
-        return profileImage;
-    }
+//    public void setProfileImage(String path) {
+//        this.profileImage = profileImage;
+//    }
+//    public String getProfileImage() {
+//        return profileImage;
+//    }
 }
