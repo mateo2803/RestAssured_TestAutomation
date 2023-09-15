@@ -16,19 +16,19 @@ Feature: Employee Endpoint
   @createEmployee
   Scenario: /create should create a new Employee
     Given the data, I should perform a POST:
-      | Mateo | 3500 | 20 |
+      | Cangrejo | 3500 | 20 |
     Then I verify that it returns status code 200
     And I verify that the body does not have size 0
     Then I verify the body response with the same data
-      | Mateo | 3500 | 20 |
+      | Cangrejo | 3500 | 20 |
 
   @updateEmployee
   Scenario: /put should update an Employee`s information
     Given and id "21" I should update the Employee`s inf with the following data
-      | Mateo | 71391 | 20 |
+      | Cangrejo | 71391 | 20 |
     Then I verify that it returns status code 200
     Then I verify the body response with the same data
-      | Mateo | 71391 | 20 |
+      | Cangrejo | 71391 | 20 |
 
   @deleteEmployee
   Scenario: /delete should delete an Employee`s information
