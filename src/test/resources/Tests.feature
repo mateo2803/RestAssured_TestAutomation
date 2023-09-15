@@ -7,12 +7,6 @@ Feature: Employee Endpoint
     Then I verify that it returns status code 200
     And I verify that the body does not have size 0
 
-  @getEmployee
-  Scenario: /employee/{id} should return an employee
-    Given an id I GET an employee: "23"
-    Then I verify that it returns status code 200
-    And I verify that I obtain the employee 23
-
   @createEmployee
   Scenario: /create should create a new Employee
     Given the data, I should perform a POST:
@@ -21,6 +15,12 @@ Feature: Employee Endpoint
     And I verify that the body does not have size 0
     Then I verify the body response with the same data
       | Cangrejo | 3500 | 20 |
+
+  @getEmployee
+  Scenario: /employee/{id} should return an employee
+    Given an id I GET an employee: "23"
+    Then I verify that it returns status code 200
+    And I verify that I obtain the employee 23
 
   @updateEmployee
   Scenario: /put should update an Employee`s information
