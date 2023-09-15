@@ -20,12 +20,12 @@ import static org.hamcrest.CoreMatchers.not;
 public class EmployeesSteps {
     Response response;
 
-    @Given("I perform a GET to the employees endpoint")
+    @Given("I perform a GET request to the employee endpoint")
     public void getEmployees(){
         response = Request.get(EmployeeEndpoints.GET_EMPLOYEES);
     }
 
-    @And("I verify status code {int} is returned")
+    @And("I verify that it returns status code {int}")
     public void verifyStatusCode(int statusCode){
         response.then().assertThat().statusCode(statusCode);
     }

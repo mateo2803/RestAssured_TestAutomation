@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">sep. 14, 2023 07:01:24 p. m.</span></a>
+<a href="#"><span class="badge badge-primary">Sep 15, 2023 11:48:49 AM</span></a>
 </li>
 </ul>
 </div>
@@ -84,7 +84,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@getEmployee</a><a class="dropdown-item" href="#">@deleteEmployee</a><a class="dropdown-item" href="#">@createEmployee</a><a class="dropdown-item" href="#">@getAll</a><a class="dropdown-item" href="#">@updateEmployee</a>
+<a class="dropdown-item" href="#">@getAll</a><a class="dropdown-item" href="#">@createEmployee</a><a class="dropdown-item" href="#">@deleteEmployee</a><a class="dropdown-item" href="#">@getEmployee</a><a class="dropdown-item" href="#">@updateEmployee</a>
 </ul>
 </li>
 </ul>
@@ -95,9 +95,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Employees endpoint</p>
+            <p class="name">Employee Endpoint</p>
             <p class="text-sm">
-              <span>19:01:24</span> / <span>00:00:05:000</span>
+              <span>11:48:50 AM</span> / <span>00:00:06:739</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -105,10 +105,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Employees endpoint</h5>
-<span class='badge badge-success'>09.14.2023 19:01:24</span>
-<span class='badge badge-danger'>09.14.2023 19:01:29</span>
-<span class='badge badge-default'>00:00:05:000</span>
+<h5 class="test-status text-fail">Employee Endpoint</h5>
+<span class='badge badge-success'>09.15.2023 11:48:50 AM</span>
+<span class='badge badge-danger'>09.15.2023 11:48:57 AM</span>
+<span class='badge badge-default'>00:00:06:739</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -120,47 +120,21 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>/employees should return all the employees</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.EmployeesSteps.getEmployees()">
-                <span>Given I perform a GET to the employees endpoint</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.EmployeesSteps.verifyStatusCode(int)">
-                <span>Then I verify status code 200 is returned</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="stepDefinitions.EmployeesSteps.verifyResponseSize(int)">
-                <span>And I verify that the body does not have size 0</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="6"><span class="badge log fail-bg mr-2">Fail</span>/employee/{id} should return an employee</div>
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>/employee should return all the employees</div>
       </div>
     </div>
         <div class="">
           <div class="card-body">
-              <div class="step pass-bg" title="stepDefinitions.EmployeesSteps.getEmployee(java.lang.String)">
-                <span>Given an id I GET an employee: "23"</span>
+              <div class="step pass-bg" title="stepDefinitions.EmployeesSteps.getEmployees()">
+                <span>Given I perform a GET request to the employee endpoint</span>
       <div>
       </div>
               </div>
               <div class="step fail-bg" title="stepDefinitions.EmployeesSteps.verifyStatusCode(int)">
-                <span>Then I verify status code 200 is returned</span>
+                <span>Then I verify that it returns status code 200</span>
       <div>
         <textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
-Expected status code <200> but was <429>.
+Expected status code <200> but was <404>.
 
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
@@ -174,6 +148,9 @@ Expected status code <200> but was <429>.
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
 	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
 	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
 	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -183,20 +160,51 @@ Expected status code <200> but was <429>.
 	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
 	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
 	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
 	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
 	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
 	at stepDefinitions.EmployeesSteps.verifyStatusCode(EmployeesSteps.java:30)
-	at ✽.I verify status code 200 is returned(file:///D:/Universidad/6to%20SEMESTRE/CERTIFICACION%20II/Tercer%20Parcial/Trabajos%20practicos/RestAssuredProyectoFinal/src/test/resources/Tests.feature:14)
+	at ✽.I verify that it returns status code 200(file:///Users/mateo/Desktop/Trabajos/Trabajos%20Mateo/Universidad/Universidad%20Privada%20Boliviana/Semestre%20VII/2.%20Certificacio%CC%81n%20II/Parciales/ProyectoFinalRestAssured/src/test/resources/Tests.feature:7)
 </textarea>
       
       </div>
               </div>
-              <div class="step skip-bg" title="stepDefinitions.EmployeesSteps.verifyEmployee(java.lang.Integer)">
-                <span>And I verify that I obtain the employee 23</span>
+              <div class="step skip-bg" title="stepDefinitions.EmployeesSteps.verifyResponseSize(int)">
+                <span>And I verify that the body does not have size 0</span>
       <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="6"><span class="badge log pass-bg mr-2">Pass</span>/employee/{id} should return an employee</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.EmployeesSteps.getEmployee(java.lang.String)">
+                <span>Given an id I GET an employee: "23"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.EmployeesSteps.verifyStatusCode(int)">
+                <span>Then I verify that it returns status code 200</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.EmployeesSteps.verifyEmployee(java.lang.Integer)">
+                <span>And I verify that I obtain the employee 23</span>
+      <div>
       </div>
               </div>
           </div>
@@ -212,13 +220,13 @@ Expected status code <200> but was <429>.
           <div class="card-body">
               <div class="step pass-bg" title="stepDefinitions.EmployeesSteps.createEmployee(io.cucumber.datatable.DataTable)">
                 <span>Given the data, I should perform a POST:</span>
-      <div><table class='markup-table table '><tr><td>Santiago</td><td>5300</td><td>26</td></tr></table>
+      <div><table class='markup-table table '><tr><td>Mateo</td><td>3500</td><td>20</td></tr></table>
       </div>
       <div>
       </div>
               </div>
               <div class="step fail-bg" title="stepDefinitions.EmployeesSteps.verifyStatusCode(int)">
-                <span>Then I verify status code 200 is returned</span>
+                <span>Then I verify that it returns status code 200</span>
       <div>
         <textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
 Expected status code <200> but was <429>.
@@ -248,7 +256,7 @@ Expected status code <200> but was <429>.
 	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
 	at stepDefinitions.EmployeesSteps.verifyStatusCode(EmployeesSteps.java:30)
-	at ✽.I verify status code 200 is returned(file:///D:/Universidad/6to%20SEMESTRE/CERTIFICACION%20II/Tercer%20Parcial/Trabajos%20practicos/RestAssuredProyectoFinal/src/test/resources/Tests.feature:22)
+	at ✽.I verify that it returns status code 200(file:///Users/mateo/Desktop/Trabajos/Trabajos%20Mateo/Universidad/Universidad%20Privada%20Boliviana/Semestre%20VII/2.%20Certificacio%CC%81n%20II/Parciales/ProyectoFinalRestAssured/src/test/resources/Tests.feature:20)
 </textarea>
       
       </div>
@@ -260,7 +268,7 @@ Expected status code <200> but was <429>.
               </div>
               <div class="step skip-bg" title="stepDefinitions.EmployeesSteps.verifyEmployeeResponseData(io.cucumber.datatable.DataTable)">
                 <span>Then I verify the body response with the same data</span>
-      <div><table class='markup-table table '><tr><td>Santiago</td><td>5300</td><td>26</td></tr></table>
+      <div><table class='markup-table table '><tr><td>Mateo</td><td>3500</td><td>20</td></tr></table>
       </div>
       <div>Step skipped
       </div>
@@ -278,13 +286,13 @@ Expected status code <200> but was <429>.
           <div class="card-body">
               <div class="step pass-bg" title="stepDefinitions.EmployeesSteps.updateEmployee(java.lang.String,io.cucumber.datatable.DataTable)">
                 <span>Given and id "21" I should update the Employee`s inf with the following data</span>
-      <div><table class='markup-table table '><tr><td>Lucas</td><td>123456</td><td>20</td></tr></table>
+      <div><table class='markup-table table '><tr><td>Mateo</td><td>71391</td><td>20</td></tr></table>
       </div>
       <div>
       </div>
               </div>
               <div class="step fail-bg" title="stepDefinitions.EmployeesSteps.verifyStatusCode(int)">
-                <span>Then I verify status code 200 is returned</span>
+                <span>Then I verify that it returns status code 200</span>
       <div>
         <textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
 Expected status code <200> but was <429>.
@@ -314,14 +322,14 @@ Expected status code <200> but was <429>.
 	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
 	at stepDefinitions.EmployeesSteps.verifyStatusCode(EmployeesSteps.java:30)
-	at ✽.I verify status code 200 is returned(file:///D:/Universidad/6to%20SEMESTRE/CERTIFICACION%20II/Tercer%20Parcial/Trabajos%20practicos/RestAssuredProyectoFinal/src/test/resources/Tests.feature:32)
+	at ✽.I verify that it returns status code 200(file:///Users/mateo/Desktop/Trabajos/Trabajos%20Mateo/Universidad/Universidad%20Privada%20Boliviana/Semestre%20VII/2.%20Certificacio%CC%81n%20II/Parciales/ProyectoFinalRestAssured/src/test/resources/Tests.feature:29)
 </textarea>
       
       </div>
               </div>
               <div class="step skip-bg" title="stepDefinitions.EmployeesSteps.verifyEmployeeResponseData(io.cucumber.datatable.DataTable)">
                 <span>Then I verify the body response with the same data</span>
-      <div><table class='markup-table table '><tr><td>Lucas</td><td>123456</td></tr></table>
+      <div><table class='markup-table table '><tr><td>Mateo</td><td>71391</td><td>20</td></tr></table>
       </div>
       <div>Step skipped
       </div>
@@ -343,7 +351,7 @@ Expected status code <200> but was <429>.
       </div>
               </div>
               <div class="step fail-bg" title="stepDefinitions.EmployeesSteps.verifyStatusCode(int)">
-                <span>Then I verify status code 200 is returned</span>
+                <span>Then I verify that it returns status code 200</span>
       <div>
         <textarea disabled class="code-block">java.lang.AssertionError: 1 expectation failed.
 Expected status code <200> but was <429>.
@@ -373,7 +381,7 @@ Expected status code <200> but was <429>.
 	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
 	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
 	at stepDefinitions.EmployeesSteps.verifyStatusCode(EmployeesSteps.java:30)
-	at ✽.I verify status code 200 is returned(file:///D:/Universidad/6to%20SEMESTRE/CERTIFICACION%20II/Tercer%20Parcial/Trabajos%20practicos/RestAssuredProyectoFinal/src/test/resources/Tests.feature:39)
+	at ✽.I verify that it returns status code 200(file:///Users/mateo/Desktop/Trabajos/Trabajos%20Mateo/Universidad/Universidad%20Privada%20Boliviana/Semestre%20VII/2.%20Certificacio%CC%81n%20II/Parciales/ProyectoFinalRestAssured/src/test/resources/Tests.feature:36)
 </textarea>
       
       </div>
@@ -430,41 +438,41 @@ Expected status code <200> but was <429>.
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>19:01:28 p. m.</td>
+<td>11:48:53 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='8'>Then I verify status code 200 is returned</a>
+<a href="#" class="linked" test-id='1' id='4'>Then I verify that it returns status code 200</a>
 <div class="">
-<span class="badge badge-default">Employees endpoint./employee/{id} should return an employee.Then I verify status code 200 is returned</span>
+<span class="badge badge-default">Employee Endpoint./employee should return all the employees.Then I verify that it returns status code 200</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>19:01:28 p. m.</td>
+<td>11:48:56 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='12'>Then I verify status code 200 is returned</a>
+<a href="#" class="linked" test-id='1' id='12'>Then I verify that it returns status code 200</a>
 <div class="">
-<span class="badge badge-default">Employees endpoint./create should create a new Employee.Then I verify status code 200 is returned</span>
+<span class="badge badge-default">Employee Endpoint./create should create a new Employee.Then I verify that it returns status code 200</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>19:01:29 p. m.</td>
+<td>11:48:56 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='17'>Then I verify status code 200 is returned</a>
+<a href="#" class="linked" test-id='1' id='17'>Then I verify that it returns status code 200</a>
 <div class="">
-<span class="badge badge-default">Employees endpoint./put should update an Employee`s information.Then I verify status code 200 is returned</span>
+<span class="badge badge-default">Employee Endpoint./put should update an Employee`s information.Then I verify that it returns status code 200</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>19:01:29 p. m.</td>
+<td>11:48:57 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='21'>Then I verify status code 200 is returned</a>
+<a href="#" class="linked" test-id='1' id='21'>Then I verify that it returns status code 200</a>
 <div class="">
-<span class="badge badge-default">Employees endpoint./delete should delete an Employee`s information.Then I verify status code 200 is returned</span>
+<span class="badge badge-default">Employee Endpoint./delete should delete an Employee`s information.Then I verify that it returns status code 200</span>
 </div>
 </td>
 </tr>
@@ -493,12 +501,12 @@ Expected status code <200> but was <429>.
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">@getEmployee</p>
+<p class="name">@getAll</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@getEmployee</h4>
+<h4>@getAll</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -512,47 +520,11 @@ Expected status code <200> but was <429>.
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>19:01:27 p. m.</td>
+<td>11:48:50 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='6'>/employee/{id} should return an employee</a>
+<a href="#" class="linked" test-id='1' id='2'>/employee should return all the employees</a>
 <div class="">
-<span class="badge badge-default">Employees endpoint./employee/{id} should return an employee</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">@deleteEmployee</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@deleteEmployee</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>19:01:29 p. m.</td>
-<td>
-<a href="#" class="linked" test-id='1' id='19'>/delete should delete an Employee`s information</a>
-<div class="">
-<span class="badge badge-default">Employees endpoint./delete should delete an Employee`s information</span>
+<span class="badge badge-default">Employee Endpoint./employee should return all the employees</span>
 </div>
 </td>
 </tr>
@@ -584,11 +556,47 @@ Expected status code <200> but was <429>.
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>19:01:28 p. m.</td>
+<td>11:48:55 AM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='10'>/create should create a new Employee</a>
 <div class="">
-<span class="badge badge-default">Employees endpoint./create should create a new Employee</span>
+<span class="badge badge-default">Employee Endpoint./create should create a new Employee</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@deleteEmployee</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@deleteEmployee</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:48:56 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='19'>/delete should delete an Employee`s information</a>
+<div class="">
+<span class="badge badge-default">Employee Endpoint./delete should delete an Employee`s information</span>
 </div>
 </td>
 </tr>
@@ -601,12 +609,12 @@ Expected status code <200> but was <429>.
 <span class="meta">
 <span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@getAll</p>
+<p class="name">@getEmployee</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@getAll</h4>
+<h4>@getEmployee</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -620,11 +628,11 @@ Expected status code <200> but was <429>.
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>19:01:24 p. m.</td>
+<td>11:48:53 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>/employees should return all the employees</a>
+<a href="#" class="linked" test-id='1' id='6'>/employee/{id} should return an employee</a>
 <div class="">
-<span class="badge badge-default">Employees endpoint./employees should return all the employees</span>
+<span class="badge badge-default">Employee Endpoint./employee/{id} should return an employee</span>
 </div>
 </td>
 </tr>
@@ -656,11 +664,11 @@ Expected status code <200> but was <429>.
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>19:01:28 p. m.</td>
+<td>11:48:56 AM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='15'>/put should update an Employee`s information</a>
 <div class="">
-<span class="badge badge-default">Employees endpoint./put should update an Employee`s information</span>
+<span class="badge badge-default">Employee Endpoint./put should update an Employee`s information</span>
 </div>
 </td>
 </tr>
@@ -681,13 +689,13 @@ Expected status code <200> but was <429>.
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>sep. 14, 2023 07:01:24 p. m.</h3>
+<h3>Sep 15, 2023 11:48:49 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>sep. 14, 2023 07:01:29 p. m.</h3>
+<h3>Sep 15, 2023 11:48:57 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -777,7 +785,7 @@ Expected status code <200> but was <429>.
 </div></div>
 <script>
 var timeline = {
-"Employees endpoint":5
+"Employee Endpoint":6.739
 };
 </script>
 <div class="row">
@@ -787,15 +795,7 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@getEmployee</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0%</td>
-</tr>
-<tr>
-<td>@deleteEmployee</td>
+<td>@getAll</td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
@@ -811,7 +811,15 @@ var timeline = {
 <td>0%</td>
 </tr>
 <tr>
-<td>@getAll</td>
+<td>@deleteEmployee</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@getEmployee</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
