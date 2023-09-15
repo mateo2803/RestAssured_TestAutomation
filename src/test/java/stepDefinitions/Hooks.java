@@ -1,6 +1,6 @@
 package stepDefinitions;
 
-import org.junit.Before;
+import io.cucumber.java.Before;
 
 public class Hooks {
     @Before

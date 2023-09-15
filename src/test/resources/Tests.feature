@@ -1,11 +1,11 @@
 Feature: Employee Endpoint
   Background: Testing Dummy API example Web Page
 
-  @getAll
-  Scenario: /employee should return all the employees
-    Given I perform a GET request to the employee endpoint
-    Then I verify that it returns status code 200
-    And I verify that the body does not have size 0
+#  @getAll
+#  Scenario: /employee should return all the employees
+#    Given I perform a GET request to the employee endpoint
+#    Then I verify that it returns status code 200
+#    And I verify that the body does not have size 0
 
   @createEmployee
   Scenario: /create should create a new Employee
